@@ -1,0 +1,20 @@
+version: "3.0"
+
+services:
+  smtp2tg:
+    image: smtp2tg
+    hostname: smtp2tg
+    container_name: smtp2tg
+    restart: always
+    environment:
+      - SMTP2TG_LISTEN_ADDR=0.0.0.0
+      - SMTP2TG_LISTEN_PORT=2525
+    env_file:
+      - .env
+    logging:
+      options:
+        max-size: '200m'
+        max-file: '5'
+    ports:
+      - 0.0.0.0:25:2525
+

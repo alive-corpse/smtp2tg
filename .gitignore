@@ -1,0 +1,7 @@
+venv
+build
+dist
+.env
+__pycache__
+smtp2tg_*
+smtp2tg.spec
